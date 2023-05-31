@@ -73,17 +73,46 @@ Install python packages
   data
     ├──dataset_name
             ├──train
-            |   ├── 00000_train_1+.png
-            |   ├── 00001_train_3+.png
-            |   └── ...
+                ├── breast_mask
+                    ├── 00000_train_1+.png
+                    ├── 00001_train_3+.png
+                    └── ...
+                ├── input_image
+                    ├── 00000_train_1+.png
+                    ├── 00001_train_3+.png
+                    └── ...
+                ├── dense_mask
+                    ├── 00000_train_1+.png
+                    ├── 00001_train_3+.png
+                    └── ...
             ├──test
-            |   ├── 00000_train_1+.png
-            |   ├── 00001_train_3+.png
-            |   └── ...
+                ├── breast_mask
+                    ├── 00000_test_1+.png
+                    ├── 00001_test_3+.png
+                    └── ...
+                ├── input_image
+                    ├── 00000_test_1+.png
+                    ├── 00001_test_3+.png
+                    └── ...
+                ├── dense_mask
+                    ├── 00000_test_1+.png
+                    ├── 00001_test_3+.png
+                    └── ...
             ├──val
-                ├── 00000_train_1+.png
-                ├── 00001_train_3+.png
-                └── ...
+                ├── breast_mask
+                    ├── 00000_val_1+.png
+                    ├── 00001_val_3+.png
+                    └── ...
+                ├── input_image
+                    ├── 00000_val_1+.png
+                    ├── 00001_val_3+.png
+                    └── ...
+                ├── dense_mask
+                    ├── 00000_val_1+.png
+                    ├── 00001_val_3+.png
+                    └── ...
+            
+
   ```
 ## Train
 For Trainning: 
