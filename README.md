@@ -30,7 +30,7 @@ If you encounter any issue or have questions regarding the library, feel free to
 # UEF Breast Cancer Group - Model Creation 
 
 ## Setup
-### 1)Envs
+### 1. Envoirnment
 - Conda
 - Python>=3.8
 - CPU or NVIDIA GPU + CUDA CuDNN
@@ -41,9 +41,8 @@ Install python packages
 2. cd Deepdensity
 3. pip install -r requirements.txt
 ```
-### 2)Prepare dataset
-- Download BCI dataset from our homepage.
-- Combine HE and IHC images.
+### 2. Prepare dataset
+
 
   - Project [Deepdensity](https://github.com/uefcancer/Deepdensity.git) provides a python script to generate model with provided dataset and hyperparameters to refine training.
   
