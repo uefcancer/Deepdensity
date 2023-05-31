@@ -97,7 +97,26 @@ python train.py --data_path /path/to/data --dataset dataset_name --logs_file_pat
 python tunning.py --data_path /path/to/data --dataset dataset_name --logs_file_path test_output/logs/abc.txt --model_save_path test_output/models/abc.pth --num_epochs 5
 ```
 
-## About Us
+## Citation
+If our work has made a positive impact on your research endeavors, we kindly request you to acknowledge our contribution by citing our paper.
+
+    @article{gudhe2022area,
+      title={Area-based breast percentage density estimation in mammograms using weight-adaptive multitask learning},
+      author={Gudhe, Naga Raju and Behravan, Hamid and Sudah, Mazen and Okuma, Hidemi and Vanninen, Ritva and Kosma, Veli-Matti and Mannermaa, Arto},
+      journal={Scientific reports},
+      volume={12},
+      number={1},
+      pages={12060},
+      year={2022},
+      publisher={Nature Publishing Group UK London}
+    }
+
+
+## Contact
+In case you run into any obstacles along the way, don't hesitate to raise an issue! We're dedicated to providing you with full support and resolving any difficulties you may encounter.
+
+Stay Connected:
+
     AI Team
         - Hamid Behravan (hamid.behravan@uef.fi)
         - Raju Gudhe (raju.gudhe@uef.fi)
