@@ -1,36 +1,20 @@
 # Deepdensity
+<div style="text-align: center; background-image: url('images/breast-cancer.jpg'); background-size: cover; padding: 50px;">
+  <h1 style=" font-size: 36px; font-family: Times">UEF Breast Cancer Group - Challenge</h1>
+</div>
 
-# MammoPy
-A Comprehensive Deep Learning Library for Mammogram Assessment
 
-[![PyPI version](https://badge.fury.io/py/mammopy.svg)](https://badge.fury.io/py/mammopy)
-![GitHub](https://img.shields.io/github/license/mammopy/mammopy)
-# Useful Links
-**[[Documentation]](https://uefcancer.github.io/MammoPy/)**
-| **[[Paper]](https://www.nature.com/articles/s41598-021-93169-w.pdf)** 
-| **[[Notebook examples]](https://github.com/uefcancer/MammoPy/tree/main/notebooks)** 
-| **[[Web applications]](https://wiki-breast.onrender.com/)** 
-# Introduction
-**Welcome to ``MammoPy`` Repository!** `MammoPy` is a python-based library designed to facilitate the creation of mammogram image analysis pipelines . The library includes plug-and-play modules to perform:
+#
+<figure>
+  <img src="images/MTLSegNet (2).png" alt="Image Caption">
+  <figcaption style="text-align: justify;">An advanced architecture for accurate mammogram segmentation. Its encoder extracts imaging features, the bottleneck enhances spatial information, and task-specific decoders segment breast area and dense tissues. Our modified loss function ensures optimal performance. Predicted segmentations are overlaid on the mammogram, with red contour for breast area and solid green for fibroglandular tissues. MTLSegNet revolutionizes mammogram analysis, enabling improved medical diagnoses.
+  <a href="https://www.nature.com/articles/s41598-022-16141-2">Reference</a>
+  </figcaption>
+</figure>
 
-- Standard mammogram image pre-processing (e.g., *normalization*, *bounding box cropping*, and *DICOM to jpeg conversion*)
-
-- Mammogram assessment pipelines (e.g., *breast area segmentation*, *dense tissue segmentation*, and *percentage density estimation*)
-
-- Modeling deep learning architectures for various downstream tasks  (e.g., *micro-calcification* and *mass detection*)
-
-- Feature attribution-based interpretability techniques (e.g., *GradCAM*, *GradCAM++*, and *LRP*)
-
-- Visualization 
-
-All the functionalities are grouped under a user-friendly API. 
-
-If you encounter any issue or have questions regarding the library, feel free to [open a GitHub issue](https://github.com/uefcancer/mammopy/issues). We'll do our best to 
-
-# UEF Breast Cancer Group - Model Creation 
-
-## Setup
-### 1. Envoirnment
+#
+# Setup
+## 1. Envoirnment
 - Conda
 - Python>=3.8
 - CPU or NVIDIA GPU + CUDA CuDNN
@@ -41,35 +25,10 @@ Install python packages
 2. cd Deepdensity
 3. pip install -r requirements.txt
 ```
-### 2. Prepare dataset
+#
+## 2. Dataset Structure
 
-
-  - Project [Deepdensity](https://github.com/uefcancer/Deepdensity.git) provides a python script to generate model with provided dataset and hyperparameters to refine training.
-  
-  - Create folder `/path/to/data` with subfolders `dataset_name` with subfolders `train`, `val`, `test`, etc. Each folder "`train`, `val`, `test`" should have three subfolders `breast_mask`, `input_image`, `dense_mask`
-  
-  - In `/path/to/data/dataset_name/train`, put breast area images in `breast_mask`, input images in `input_image` and dense area masks in `dense_mask`. Repeat same for other data splits (`val`, `test`, etc).
-
-  - Corresponding images in a pair {A,B} must be the same size and have the same filename, e.g., `/path/to/data/dataset_name/train/1.jpg` is considered to correspond to `/path/to/data/dataset_name/train/1.jpg`.
-
-  
-   - To store the output files in the desired format, create the following folders:
-     - Log file: `test_output/logs/abc.txt`
-     - Model file: `test_output/models/abc.pth`
-    
-    - Replace `abc` with the desired name for your log and model files. This format ensures that the logs and models are saved in separate folders for better organization.
-
-
-  Once the data and output folders are formatted this way, call:
-  
-  ```
-  python train.py --data_path /path/to/data --dataset dataset_name --logs_file_path test_output/logs/abc.txt --model_save_path test_output/models/abc.pth --num_epochs 5
-  ```
-
-  This will combine each pair of images (A,B) into a single image file, ready for training.
-
-- File structure
-  ```
+```
   data
     ├──dataset_name
             ├──train
@@ -114,19 +73,43 @@ Install python packages
             
 
   ```
-## Train
-For Trainning: 
+
+  ### Explanation of dataset structure
+  - Create folder `/path/to/data` with subfolders `dataset_name` with subfolders `train`, `val`, `test`, etc. Each folder "`train`, `val`, `test`" should have three subfolders `breast_mask`, `input_image`, `dense_mask`
+  
+  - In `/path/to/data/dataset_name/train`, put breast area images in `breast_mask`, input images in `input_image` and dense area masks in `dense_mask`. Repeat same for other data splits (`val`, `test`, etc).
+
+  - Corresponding images in these folder must be the same size and have the same filename, e.g., `/path/to/data/dataset_name/train/1.jpg` is considered to correspond to `/path/to/data/dataset_name/train/1.jpg`.
+
+  
+   - To store the output files in the desired format, create the following folders:
+     - Log file: `test_output/logs/abc.txt`
+     - Model file: `test_output/models/abc.pth`
+    
+- Replace `abc` with the desired name for your log and model files. This format ensures that the logs and models are saved in separate folders for better organization.
+
+#
+## 3. Training
+
+
 ```
 python train.py --data_path /path/to/data --dataset dataset_name --logs_file_path test_output/logs/abc.txt --model_save_path test_output/models/abc.pth --num_epochs 5
 ```
 
-## Hyper Paramter Tunning
+#
+## 4. Hyper paramter information
 
-```
-python tunning.py --data_path /path/to/data --dataset dataset_name --logs_file_path test_output/logs/abc.txt --model_save_path test_output/models/abc.pth --num_epochs 5
-```
+| Hyperparameters | Search hyperparameters  | Optimal values |
+| -------- | -------- | -------- |
+| Training optimizers   | (Stochastic gradient descent, Adam, RMSprop)    | Adam  |
+| Learning rate schedulers   | (StepLR, MultiStepLR, CosineAnnealingLR, ReduceLROnPlateau, CyclicLR)   | ReduceLROnPlateau   |
+| Initial learning rate   | (le-1, le-2, le-3, le-4, le-5)   | le-3   |
+| Loss functions   | (BCEwithlogits, Dice, Tversky, focal Tversky)   | focal Tversky   |
 
-## Citation
+    Introducing our meticulously honed parameter values. ! But that's not all – we believe in the power of collaboration. We warmly invite you to bring your own hyperparameters values, unlocking the potential for even more accurate and groundbreaking models.
+
+#
+## 5. Citation
 If our work has made a positive impact on your research endeavors, we kindly request you to acknowledge our contribution by citing our paper.
 
     @article{gudhe2022area,
@@ -140,8 +123,8 @@ If our work has made a positive impact on your research endeavors, we kindly req
       publisher={Nature Publishing Group UK London}
     }
 
-
-## Contact
+#
+## 6. Contact
 In case you run into any obstacles along the way, don't hesitate to raise an issue! We're dedicated to providing you with full support and resolving any difficulties you may encounter.
 
 Stay Connected:
@@ -154,3 +137,9 @@ Stay Connected:
         - Arto Mannermaa (arto.mannermaa@uef.fi)
         - Veli-Matti Kosma (veli-matti.kosma@uef.fi)
         - Sudah Mazen (mazen.sudah@uef.fi)
+
+#
+## 7. Acknowledgements
+Grateful to the open-source projects and their visionary authors for their generous contributions that inspired and empowered our project. Together, we drive innovation towards an extraordinary future.
+    
+- [Segmentation Models](https://github.com/qubvel/segmentation_models.pytorch)

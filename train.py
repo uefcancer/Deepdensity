@@ -10,7 +10,7 @@ import torch
 import torch.optim as optim
 import torch.nn as nn
 from torch.utils.data import DataLoader
-from dataset import KUHDataset
+from dataset import MammoDataset
 import segmentation_models_multi_tasking as smp
 import matplotlib.pyplot as plt
 
@@ -55,11 +55,11 @@ print(config)
 
 torch.manual_seed(1990)
 
-train_dataset = KUHDataset(path=config['data_path'], dataset=config['dataset'], split='train', augmentations=None)
+train_dataset = MammoDataset(path=config['data_path'], dataset=config['dataset'], split='train', augmentations=None)
 print(len(train_dataset))
 train_dataloader = DataLoader(train_dataset, shuffle=True, batch_size =config['train_batch_size'], num_workers=config['num_workers'])
 
-valid_dataset = KUHDataset(path=config['data_path'], dataset=config['dataset'], split='valid', augmentations=None)
+valid_dataset = MammoDataset(path=config['data_path'], dataset=config['dataset'], split='valid', augmentations=None)
 print(len(valid_dataset))
 valid_dataloader = DataLoader(valid_dataset, shuffle=True, batch_size=config['valid_batch_size'], num_workers=config['num_workers'])
 

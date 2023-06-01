@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-data = np.loadtxt('MG_DDSM/logs/unet.txt')
+data = np.loadtxt('test_output/logs/unet.txt')
 
 epoch = data[:, 0]
 train_accuracy = data[:, 6] * 100

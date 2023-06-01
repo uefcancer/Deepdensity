@@ -15,7 +15,7 @@ from torchvision import transforms
 import matplotlib.pyplot as plt
 import albumentations as A
 
-class KUHDataset(Dataset):
+class MammoDataset(Dataset):
     def __init__(self, path, dataset, split, augmentations=False):
         self.path = path
         self.split = split
@@ -69,7 +69,7 @@ class KUHDataset(Dataset):
             return self.to_tensor(self.image), self.to_tensor(self.mask), self.to_tensor(self.contour)
 
 
-class KUHEvaluation(Dataset):
+class MammoEvaluation(Dataset):
     def __init__(self, path):
         self.path = path
 

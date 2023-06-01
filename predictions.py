@@ -2,7 +2,7 @@ import os
 import argparse
 import torch
 import torch.nn as nn
-from dataset import KUHEvaluation
+from dataset import MammoEvaluation
 from torch.utils.data import DataLoader
 import matplotlib.pyplot as plt
 import cv2
@@ -24,8 +24,8 @@ def parse_args():
 config = vars(parse_args())
 print(config)
 
-test_dataset = KUHEvaluation(path='data/MG_Tuni/valid/images')
-#test_dataset = KUHEvaluation(path=config['data_path'])
+#test_dataset = MammoEvaluation(path=config['data_path'])
+test_dataset = MammoEvaluation(path='data/dataset_name/valid/input_image/*')
 test_dataloader = DataLoader(test_dataset, shuffle=False, batch_size =1, num_workers=config['num_workers'])
 
 # load best saved checkpoint
@@ -50,9 +50,9 @@ for i, (img_id, img_shape,  image) in enumerate(test_dataloader):
     pred1 = cv2.resize(pred1, (img_shape[1].item(), img_shape[0].item()))
     pred2 = cv2.resize(pred2, (img_shape[1].item(), img_shape[0].item()))
 
-    plt.imsave(os.path.join('MG_tuni/unet_aug_predictions/images', img_id[0]), image, cmap='gray')
-    plt.imsave(os.path.join('MG_tuni/unet_aug_predictions/breast_masks', img_id[0]), pred1, cmap='gray')
-    plt.imsave(os.path.join('MG_tuni/unet_aug_predictions/dense_masks', img_id[0]), pred2, cmap='gray')
+    plt.imsave(os.path.join('test_output/unet_aug_predictions/images', img_id[0]), image, cmap='gray')
+    plt.imsave(os.path.join('test_output/unet_aug_predictions/breast_masks', img_id[0]), pred1, cmap='gray')
+    plt.imsave(os.path.join('test_output/unet_aug_predictions/dense_masks', img_id[0]), pred2, cmap='gray')
 
     #plot_images(image, pred1, pred2)
     print(i, img_id[0], image.shape, pred1.shape, pred2.shape)
