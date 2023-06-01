@@ -1,17 +1,6 @@
-# Deepdensity
 
-    
-<div style= "
-            background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20201014/pngtree-breast-cancer-awareness-pink-ribbons-background-design-image_417234.jpg);
-            text-align: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            padding: 50px;
-            background-color: rgba(255, 255, 255, 0.8);
-            padding: 20px;
-        ">
-        <h1 style=" font-size: 36px; font-family: Times">UEF Breast Cancer Group - Challenge</h1>
-</div>
+<h2 style="text-align: center; font-size: 30px; font-family: Times">Deep Density</h2>
+<h1 style="text-align: center; font-size: 36px; font-family: Times">UEF Breast Cancer Group - Challenge</h1>
 
 
 
