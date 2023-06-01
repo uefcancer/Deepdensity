@@ -1,5 +1,5 @@
 # Deepdensity
-<div style="text-align: center; background-image: url('images/breast-cancer.jpg'); background-size: cover; padding: 50px;">
+<div style="text-align: center; background-image: url('images\breast-cancer.jpg'); background-size: cover; padding: 50px;">
   <h1 style=" font-size: 36px; font-family: Times">UEF Breast Cancer Group - Challenge</h1>
 </div>
 
