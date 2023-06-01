@@ -1,13 +1,12 @@
-
-<h2 style="text-align: center; font-size: 30px; font-family: Times">Deep Density</h2>
-<h1 style="text-align: center; font-size: 36px; font-family: Times">UEF Breast Cancer Group - Challenge</h1>
+## Deepdensity  
+# UEF Breast Cancer Group - Challenge
 
 
 
 #
 <figure>
   <img src="images/MTLSegNet (2).png" alt="Image Caption">
-  <figcaption style="text-align: justify;">An advanced architecture for accurate mammogram segmentation. Its encoder extracts imaging features, the bottleneck enhances spatial information, and task-specific decoders segment breast area and dense tissues. Our modified loss function ensures optimal performance. Predicted segmentations are overlaid on the mammogram, with red contour for breast area and solid green for fibroglandular tissues. MTLSegNet revolutionizes mammogram analysis, enabling improved medical diagnoses.
+  <figcaption>An advanced architecture for accurate mammogram segmentation. Its encoder extracts imaging features, the bottleneck enhances spatial information, and task-specific decoders segment breast area and dense tissues. Our modified loss function ensures optimal performance. Predicted segmentations are overlaid on the mammogram, with red contour for breast area and solid green for fibroglandular tissues. MTLSegNet revolutionizes mammogram analysis, enabling improved medical diagnoses.
   <a href="https://www.nature.com/articles/s41598-022-16141-2">Reference</a>
   </figcaption>
 </figure>
