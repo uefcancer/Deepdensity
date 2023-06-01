@@ -3,6 +3,12 @@
   <h1 style=" font-size: 36px; font-family: Times">UEF Breast Cancer Group - Challenge</h1>
 </div>
 
+<div style="position: relative; ">
+  <img src="images/breast-cancer.jpg" alt="Background Image" style="width: 100%; height: auto;">
+  <div style="position: absolute; top: 50%; left: 15%; transform: translate(-10%, -50%); ">
+    <h1 style=" font-size: 36px; font-family: Times">UEF Breast Cancer Group - Challenge</h1>
+  </div>
+</div>
 
 #
 <figure>
