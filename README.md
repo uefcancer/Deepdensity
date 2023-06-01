@@ -104,7 +104,7 @@ python train.py --data_path /path/to/data --dataset dataset_name --logs_file_pat
 | Initial learning rate   | (le-1, le-2, le-3, le-4, le-5)   | le-3   |
 | Loss functions   | (BCEwithlogits, Dice, Tversky, focal Tversky)   | focal Tversky   |
 
-    Introducing our meticulously honed parameter values. ! But that's not all – we believe in the power of collaboration. We warmly invite you to bring your own hyperparameters values, unlocking the potential for even more accurate and groundbreaking models.
+>Introducing our meticulously honed parameter values. ! But that's not all – we believe in the power of collaboration. We warmly invite you to bring your own hyperparameters values, unlocking the potential for even more accurate and groundbreaking models.
 
 #
 ## 5. Citation
