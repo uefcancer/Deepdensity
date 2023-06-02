@@ -72,19 +72,6 @@ Install python packages
 
   ```
 
-  ### Explanation of dataset structure
-  - Create folder `/path/to/data` with subfolders `dataset_name` with subfolders `train`, `val`, `test`, etc. Each folder "`train`, `val`, `test`" should have three subfolders `breast_mask`, `input_image`, `dense_mask`
-  
-  - In `/path/to/data/dataset_name/train`, put breast area images in `breast_mask`, input images in `input_image` and dense area masks in `dense_mask`. Repeat same for other data splits (`val`, `test`, etc).
-
-  - Corresponding images in these folder must be the same size and have the same filename, e.g., `/path/to/data/dataset_name/train/1.jpg` is considered to correspond to `/path/to/data/dataset_name/train/1.jpg`.
-
-  
-   - To store the output files in the desired format, create the following folders:
-     - Log file: `test_output/logs/abc.txt`
-     - Model file: `test_output/models/abc.pth`
-    
-- Replace `abc` with the desired name for your log and model files. This format ensures that the logs and models are saved in separate folders for better organization.
 
 #
 ## 3. Training
@@ -93,6 +80,11 @@ Install python packages
 ```
 python train.py --data_path /path/to/data --dataset dataset_name --logs_file_path test_output/logs/abc.txt --model_save_path test_output/models/abc.pth --num_epochs 5
 ```
+- To store the output files in the desired format, create the following folders:
+     - Log file: `test_output/logs/abc.txt`
+     - Model file: `test_output/models/abc.pth`
+    
+- Replace `abc` with the desired name for your log and model files. This format ensures that the logs and models are saved in separate folders for better organization.
 
 #
 ## 4. Hyper paramter information
