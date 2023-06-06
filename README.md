@@ -1,5 +1,6 @@
 ## Deepdensity  
 # UEF Breast Cancer Group - Challenge
+>This repository is a baseline model for estimating breast density from mammograms.
 
 
 
@@ -15,7 +16,8 @@
 ## 1. Envoirnment
 - Conda
 - Python>=3.8
-- CPU or NVIDIA GPU + CUDA CuDNN
+- CPU or NVIDIA GPU + CUDA CuDNN 
+    -  (CUDA Version: 11.7 & Model: Quadro P1000)
 
 Install python packages
 ```
@@ -71,6 +73,7 @@ Install python packages
             
 
   ```
+> Data will be provided in a zip file. Access data by clicking [here]().
 
 
 #
@@ -130,6 +133,6 @@ Stay Connected:
 
 #
 ## 7. Acknowledgements
-Grateful to the open-source projects and their visionary authors for their generous contributions that inspired and empowered our project. Together, we drive innovation towards an extraordinary future.
+Grateful to the open-source projects and their visionary authors for their generous contributions that inspired and empowered our project. 
     
 - [Segmentation Models](https://github.com/qubvel/segmentation_models.pytorch)
