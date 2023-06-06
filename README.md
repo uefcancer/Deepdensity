@@ -33,42 +33,42 @@ Install python packages
     ├──dataset_name
             ├──train
                 ├── breast_mask
-                    ├── 00000_train_1+.png
-                    ├── 00001_train_3+.png
+                    ├── 00000_train_1.png
+                    ├── 00001_train_3.png
                     └── ...
                 ├── input_image
-                    ├── 00000_train_1+.png
-                    ├── 00001_train_3+.png
+                    ├── 00000_train_1.png
+                    ├── 00001_train_3.png
                     └── ...
                 ├── dense_mask
-                    ├── 00000_train_1+.png
-                    ├── 00001_train_3+.png
+                    ├── 00000_train_1.png
+                    ├── 00001_train_3.png
                     └── ...
             ├──test
                 ├── breast_mask
-                    ├── 00000_test_1+.png
-                    ├── 00001_test_3+.png
+                    ├── 00000_test_1.png
+                    ├── 00001_test_3.png
                     └── ...
                 ├── input_image
-                    ├── 00000_test_1+.png
-                    ├── 00001_test_3+.png
+                    ├── 00000_test_1.png
+                    ├── 00001_test_3.png
                     └── ...
                 ├── dense_mask
-                    ├── 00000_test_1+.png
-                    ├── 00001_test_3+.png
+                    ├── 00000_test_1.png
+                    ├── 00001_test_3.png
                     └── ...
             ├──val
                 ├── breast_mask
-                    ├── 00000_val_1+.png
-                    ├── 00001_val_3+.png
+                    ├── 00000_val_1.png
+                    ├── 00001_val_3.png
                     └── ...
                 ├── input_image
-                    ├── 00000_val_1+.png
-                    ├── 00001_val_3+.png
+                    ├── 00000_val_1.png
+                    ├── 00001_val_3.png
                     └── ...
                 ├── dense_mask
-                    ├── 00000_val_1+.png
-                    ├── 00001_val_3+.png
+                    ├── 00000_val_1.png
+                    ├── 00001_val_3.png
                     └── ...
             
 
