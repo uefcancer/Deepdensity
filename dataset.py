@@ -68,13 +68,15 @@ class MammoDataset(Dataset):
         else:
             return self.to_tensor(self.image), self.to_tensor(self.mask), self.to_tensor(self.contour)
 
-
 class MammoEvaluation(Dataset):
-    def __init__(self, path):
+    def __init__(self, path, dataset, split):
         self.path = path
+        self.split = split
+        self.dataset = dataset
 
-
-        self.images = natsorted(glob.glob(os.path.join(self.path, self.dataset,  'data/dataset_name/test/breast_mask/*')))
+        self.images = natsorted(glob.glob(os.path.join(self.path, self.dataset, self.split, 'input_image/*')))
+        self.b_mask = natsorted(glob.glob(os.path.join(self.path, self.dataset, self.split, 'breast_mask/*')))
+        self.d_mask = natsorted(glob.glob(os.path.join(self.path, self.dataset, self.split, 'dense_mask/*')))
         #self.images = natsorted(glob.glob(os.path.join(self.path,  '*')))
 
 
@@ -87,11 +89,19 @@ class MammoEvaluation(Dataset):
                                              transforms.ToTensor(), ])
 
         self.image_org = cv2.imread(self.images[index], 1)
-        self.image = self.to_tensor(self.image_org)
+        self.image_org = cv2.cvtColor(self.image_org, cv2.COLOR_BGR2RGB)
 
-        return os.path.split(self.images[index])[-1], self.image_org.shape, self.image
+        self.b_mask_org = cv2.imread(self.b_mask[index], 0)
+        self.d_mask_org = cv2.imread(self.d_mask[index], 0)
 
-
+        
+        self.image_org = self.to_tensor(self.image_org)
+        self.b_mask_org = self.to_tensor(self.b_mask_org)
+        self.d_mask_org = self.to_tensor(self.d_mask_org)
+        #print(self.image)
+        #print(self.image.shape)
+        
+        return os.path.split(self.images[index])[-1], self.image_org, self.b_mask_org, self.d_mask_org
 
 ### 
 #data = KUHDataset(path='data', dataset='DDSM_Dataset', split='train')
