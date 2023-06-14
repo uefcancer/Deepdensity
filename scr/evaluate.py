@@ -11,7 +11,6 @@ import torch.nn as nn
 from dataset import MammoDataset
 from torch.utils.data import DataLoader
 import segmentation_models_multi_tasking as smp
-import matplotlib.pyplot as plt
 
 LOSS = 'FocalTverskyLoss' # change the results log ['DiceLoss', 'TverskyLoss', 'FocalTverskyLoss', 'BCEWithLogitsLoss']
 
@@ -26,7 +25,7 @@ def parse_args():
     parser.add_argument('--loss_fucntion',default=LOSS, type=str, help='loss fucntion')
     parser.add_argument('--model_save_path', default='test_output/models/unet.pth', type=str, help='path to save the model')  # change here
 
-    parser.add_argument('--results_path', default='test_output/evaluation/kys_mias.txt', type=str,
+    parser.add_argument('--results_path', default='test_output/evaluation/dataset_name.txt', type=str,
                         help='path to save the model')  # change here
 
     config = parser.parse_args()
@@ -78,7 +77,3 @@ with open(config['results_path'], 'a+') as logs_file:
             test_logs['fscore'],
             test_logs['accuracy'],
             test_logs['iou_score']), file=logs_file)
-
-                                                                                                  
-
-
