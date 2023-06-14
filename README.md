@@ -81,7 +81,7 @@ Install python packages
 
 
 ```
-python train.py --data_path /path/to/data --dataset dataset_name --logs_file_path test_output/logs/abc.txt --model_save_path test_output/models/abc.pth --num_epochs 5
+python scr/train.py --data_path /path/to/data --dataset dataset_name --logs_file_path test_output/logs/abc.txt --model_save_path test_output/models/abc.pth --num_epochs 5
 ```
 - To store the output files in the desired format, create the following folders:
      - Log file: `test_output/logs/abc.txt`
@@ -90,7 +90,23 @@ python train.py --data_path /path/to/data --dataset dataset_name --logs_file_pat
 - Replace `abc` with the desired name for your log and model files. This format ensures that the logs and models are saved in separate folders for better organization.
 
 #
-## 4. Hyper paramter information
+## 4. Prediction
+
+
+```
+python scr/predictions.py --data_path data --dataset dataset_name --results_path test_output/logs/results.txt --model_path test_output/models/abc.pth  --density_compare test_output/logs/density_comparision.txt
+```
+- To store the output files in the desired format, create the following folders:
+     - Result file for Test Data: `test_output/logs/results.txt`
+     - Density file (Image Wise): `test_output/models/density_comparision.pth`
+    
+- These files have Image wise output. 
+    - `Result File` contain `Precision`, `Recall`, `Fscore`, `Accuracy`, `IoU`
+    - `Density file` contain `Predicted Density`, `Ground Truth (Baseline Density)`, `Absolute Mean Difference of Densities`
+
+
+#
+## 5. Hyper paramter information
 
 | Hyperparameters | Search hyperparameters  | Optimal values |
 | -------- | -------- | -------- |
@@ -102,7 +118,7 @@ python train.py --data_path /path/to/data --dataset dataset_name --logs_file_pat
 >Introducing our meticulously honed parameter values. ! But that's not all – we believe in the power of collaboration. We warmly invite you to bring your own hyperparameters values, unlocking the potential for even more accurate and groundbreaking models.
 
 #
-## 5. Citation
+## 6. Citation
 If our work has made a positive impact on your research endeavors, we kindly request you to acknowledge our contribution by citing our paper.
 
     @article{gudhe2022area,
@@ -117,7 +133,7 @@ If our work has made a positive impact on your research endeavors, we kindly req
     }
 
 #
-## 6. Contact
+## 7. Contact
 In case you run into any obstacles along the way, don't hesitate to raise an issue! We're dedicated to providing you with full support and resolving any difficulties you may encounter.
 
 Stay Connected:
@@ -132,7 +148,7 @@ Stay Connected:
         - Sudah Mazen (mazen.sudah@uef.fi)
 
 #
-## 7. Acknowledgements
+## 8. Acknowledgements
 Grateful to the open-source projects and their visionary authors for their generous contributions that inspired and empowered our project. 
     
 - [Segmentation Models](https://github.com/qubvel/segmentation_models.pytorch)

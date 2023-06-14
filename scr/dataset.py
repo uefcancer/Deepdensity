@@ -10,9 +10,8 @@ import glob
 from natsort import natsorted
 import cv2
 import torch
-from torch.utils.data import Dataset, DataLoader
+from torch.utils.data import Dataset
 from torchvision import transforms
-import matplotlib.pyplot as plt
 import albumentations as A
 
 class MammoDataset(Dataset):
