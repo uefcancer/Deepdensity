@@ -65,7 +65,7 @@ Install python packages
 
 
 #
-## 3. Train.py
+## 3. train.py
 
 
 ```
