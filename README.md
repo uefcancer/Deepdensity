@@ -65,7 +65,7 @@ Install python packages
 
 
 #
-## 3. Training
+## 3. Train.py
 
 
 ```
@@ -78,12 +78,14 @@ python scr/train.py --data_path /path/to/data --dataset dataset_name --logs_file
 - Replace `abc` with the desired name for your log and model files. This format ensures that the logs and models are saved in separate folders for better organization.
 
 #
-## 4. Prediction
+## 4. prediction.py
 
 
 ```
 python scr/predictions.py --data_path data --dataset dataset_name --results_path test_output/logs/results.txt --model_path test_output/models/abc.pth  --density_compare test_output/logs/density_comparision.txt
 ```
+- To estimate the breast area, dense area and percentage density
+  
 - To store the output files in the desired format, create the following folders:
      - Result file for Test Data: `test_output/logs/results.txt`
      - Density file (Image Wise): `test_output/models/density_comparision.pth`
@@ -92,6 +94,12 @@ python scr/predictions.py --data_path data --dataset dataset_name --results_path
     - `Result File` contain `Precision`, `Recall`, `Fscore`, `Accuracy`, `IoU`
     - `Density file` contain `Predicted Density`, `Ground Truth (Baseline Density)`, `Absolute Mean Difference of Densities`
 
+
+## 4. Evaluate.py
+
+
+- To report segmentation metrics of breast and dense tissue segmentations
+- 
 
 #
 ## 5. Hyper paramter information
