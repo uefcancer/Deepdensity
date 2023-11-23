@@ -33,30 +33,30 @@ Install python packages
     ├──dataset_name
             ├──train
                 ├── breast_mask
-                    ├── 00000_train_1.png
-                    ├── 00001_train_3.png
+                    ├── 00000_train_1.jpg
+                    ├── 00001_train_3.jpg
                     └── ...
                 ├── input_image
-                    ├── 00000_train_1.png
-                    ├── 00001_train_3.png
+                    ├── 00000_train_1.jpg
+                    ├── 00001_train_3.jpg
                     └── ...
                 ├── dense_mask
-                    ├── 00000_train_1.png
-                    ├── 00001_train_3.png
+                    ├── 00000_train_1.jpg
+                    ├── 00001_train_3.jpg
                     └── ...
 
             ├──val
                 ├── breast_mask
-                    ├── 00000_val_1.png
-                    ├── 00001_val_3.png
+                    ├── 00000_val_1.jpg
+                    ├── 00001_val_3.jpg
                     └── ...
                 ├── input_image
-                    ├── 00000_val_1.png
-                    ├── 00001_val_3.png
+                    ├── 00000_val_1.jpg
+                    ├── 00001_val_3.jpg
                     └── ...
                 ├── dense_mask
-                    ├── 00000_val_1.png
-                    ├── 00001_val_3.png
+                    ├── 00000_val_1.jpg
+                    ├── 00001_val_3.jpg
                     └── ...
             
 
