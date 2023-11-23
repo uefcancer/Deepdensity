@@ -138,16 +138,12 @@ In case you run into any obstacles along the way, don't hesitate to raise an iss
 
 Stay Connected:
 
-    AI Team
-        - Hamid Behravan (hamid.behravan@uef.fi)
-        - Raju Gudhe (raju.gudhe@uef.fi)
-        - Muhammad Hanan (muhammad.hanan@uef.fi)
-    Cancer Domain Board
-        - Arto Mannermaa (arto.mannermaa@uef.fi)
-        - Veli-Matti Kosma (veli-matti.kosma@uef.fi)
-        - Sudah Mazen (mazen.sudah@uef.fi)
+    Team
+        - Hamid Behravan, PhD. (hamid.behravan@uef.fi)
+        - Raju Gudhe, MSc. (raju.gudhe@uef.fi)
+        - Arto Mannermaa, professor (arto.mannermaa@uef.fi)
 
-#
+
 ## 8. Acknowledgements
 Grateful to the open-source projects and their visionary authors for their generous contributions that inspired and empowered our project. 
     
