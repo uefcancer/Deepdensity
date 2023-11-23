@@ -95,7 +95,7 @@ python scr/predictions.py --data_path data --dataset dataset_name --results_path
     - `Density file` contain `Predicted Density`, `Ground Truth (Baseline Density)`, `Absolute Mean Difference of Densities`
 
 
-## 4. Evaluate.py
+## 4. evaluate.py
 
 
 - To report segmentation metrics of breast and dense tissue segmentations
