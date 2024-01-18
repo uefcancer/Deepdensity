@@ -1,0 +1,10 @@
+#remove all other datasets other than the example one
+data/*
+!data/dataset_name/
+!data/dataset_name/**
+
+# Byte-compiled / optimized / DLL files
+**/__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
